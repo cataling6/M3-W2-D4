@@ -22,3 +22,10 @@
 .bg-blur {
   backdrop-filter: blur(4px);
 }
+
+.vuoto {
+  height: 80vh;
+}
+
+.standard-card-width {
+}
