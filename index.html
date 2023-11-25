@@ -14,33 +14,31 @@
   <body>
     <header>
       <nav class="navbar navbar-expand-lg w-75 mx-auto">
-        <div class="container-fluid">
+        <div class="container-fluid d-flex justify-content-between">
           <div class="logo">
             <img src="./assets/logo/Borcelle (1).png" alt="Logo" />
           </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Offerte</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Seleziona un periodo </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#estivo">Estivo</a></li>
-                  <li><a class="dropdown-item" href="#invernale">Invernale</a></li>
-                </ul>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+          <div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Offerte</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Seleziona un periodo </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#estivo">Estivo</a></li>
+                    <li><a class="dropdown-item" href="#invernale">Invernale</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </nav>
@@ -48,14 +46,46 @@
     <div class="jumbo-bg w-100 jumbo-text" name="jumbotron" aria-hidden="true">
       <div class="d-flex flex-column text-center py-5 justify-content-center">
         <h1 class="display-5 fw-bold">Viaggi Voglio Vivere ...</h1>
-        <p class="col-md-8 fs-4 text-center align-self-center">"Con il nostro impegno senza star mai in giù, trova il tuo viaggio online su questo V V V !"</p>
+        <p class="col-md-8 fs-5 text-center align-self-center">"Con il nostro impegno senza star mai in giù, trova il tuo viaggio online su questo V V V !"</p>
         <a href="#offerte"><div class="btn btn-primary btn-lg align-self-center" role="button">Offerte della settimana</div></a>
       </div>
     </div>
-    <div class="vuoto"></div>
-    <main class="w-75 mx-auto">
+
+    <main>
+      <div class="vuoto-bianco"></div>
+      <div class="vuoto1"></div>
+
+      <div class="container d-sm-none d-md-block d-none d-sm-block mt-5" id="offertaDG">
+        <h2 class="text-center">Offerta del giorno!!!</h2>
+        <div class="row">
+          <div class="daily-discount">
+            <div class="col-lg-4 h-100 bg-blur describe">
+              <h4>Vola nella terra di Dracula!</h4>
+              <ul class="text-warning fw-bolder">
+                <li>Destinazione: <span class="text-light">Bucarest</span></li>
+                <li>Dal: <span class="text-light">2023-07-14</span></li>
+                <li>Al: <span class="text-light">2023-07-23</span></li>
+                <li>Prezzo per 2 persone: <span class="text-light">499€</span></li>
+              </ul>
+
+              <p class="mt-5">Esplora la magia di Bucarest, la vibrante capitale della Romania, con la nostra esclusiva offerta di viaggio. Con una storia affascinante e una fusione unica di stili architettonici, Bucarest è una destinazione che offre un'esperienza indimenticabile.</p>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center">
+          <a href="#offerte">
+            <div class="btn btn-outline-info mt-5"><i class="fa fa-arrow-down-long"></i> scopri le offerte settimanali <i class="fa fa-arrow-down-long"></i></div>
+          </a>
+        </div>
+      </div>
+      <div class="vuoto-bianco"></div>
+      <div class="vuoto2"></div>
+
+      <div class="vuoto-bianco"></div>
+      <div class="vuoto1"></div>
+
       <div class="container col-lg-12 col-md-12 col-sm-12 mt-5" id="offerte">
-        <h2 class="text-center">Offerte last minute imperdibili</h2>
+        <h2 class="text-center">Offerte della settimana</h2>
         <div class="row"></div>
         <div class="d-flex justify-content-center">
           <a href="#estivo">
@@ -63,12 +93,14 @@
           </a>
         </div>
       </div>
-      <div class="vuoto"></div>
+      <div class="vuoto-bianco"></div>
+      <div class="vuoto2"></div>
+
       <div class="container" id="estivo">
         <h2 class="text-center">Offerte estive (Copparo consigliata)</h2>
         <div class="row"></div>
       </div>
-      <div class="vuoto"></div>
+      <div class="vuoto3"></div>
     </main>
     <footer>
       <!-- place footer here -->
