@@ -6,11 +6,15 @@
 .logo > img {
   width: 120px;
 }
+.card > img {
+  object-fit: cover;
+  aspect-ratio: 1/1;
+}
 
-.nav-item:hover {
+/* .nav-item:hover {
   transition: 0.5s all;
   transform: rotate(45deg);
-}
+} */
 
 .jumbo-bg {
   background-image: url(./assets/hero.jpg);
@@ -30,7 +34,10 @@
 .bg-blur {
   backdrop-filter: blur(4px);
 }
+.card-body > * > span {
+  font-weight: bold;
+}
 
 .vuoto {
-  height: 80vh;
+  height: 100vh;
 }
