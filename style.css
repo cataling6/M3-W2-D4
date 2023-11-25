@@ -11,10 +11,10 @@
   aspect-ratio: 1/1;
 }
 
-/* .nav-item:hover {
+.nav-item:hover {
   transition: 0.5s all;
   transform: rotate(45deg);
-} */
+}
 
 .jumbo-bg {
   background-image: url(./assets/hero.jpg);
