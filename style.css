@@ -35,7 +35,7 @@
 }
 
 .bg-blur {
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(5px);
 }
 .card-body > * > span {
   font-weight: bold;
@@ -76,6 +76,11 @@
 .describe {
   padding-left: 1vw;
   padding-top: 1vw;
+  transition: 0.5s all;
+}
+.describe:hover {
+  background-color: rgba(29, 0, 0, 0.724);
+  transition: 1s all;
 }
 .describe > h4 {
   text-align: center;
