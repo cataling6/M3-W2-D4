@@ -1,6 +1,6 @@
 * {
   font-family: "Courier New", Courier, monospace;
-  font-size: large;
+  font-size: 1rem;
 }
 
 .logo > img {
@@ -13,10 +13,18 @@
 }
 
 .jumbo-bg {
-  background-image: url(./assets/hero.webp);
-  object-fit: contain;
-  background-repeat: no-repeat;
-  aspect-ratio: 3/1;
+  background-image: url(./assets/hero.jpg);
+  object-fit: fill;
+  background-size: cover;
+  background-position: 50% 70%;
+  aspect-ratio: 5/1;
+  background-attachment: fixed;
+}
+
+.jumbo-text {
+  color: aqua;
+  text-decoration: dotted;
+  text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
 }
 
 .bg-blur {
@@ -25,7 +33,4 @@
 
 .vuoto {
   height: 80vh;
-}
-
-.standard-card-width {
 }
