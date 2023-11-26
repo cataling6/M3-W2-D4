@@ -137,7 +137,7 @@ for (let i = 0; i < offerta.length; i++) {
                   <h4 class="card-title"><span>${offerta[i].destinazione}</span></h4>
                   <p class="card-text">Dal: <span>${offerta[i].dataPartenza}</span></p>
                   <p class="card-text">Al: <span>${offerta[i].dataRitorno}</span></p>
-                  <div class="align-content-center justify-content-center d-flex"><a href="#" class="btn btn-outline-info">Scopri offerta</a></div>
+                  <div class="align-content-center justify-content-center d-flex"><input type="button" onclick="openModal('${offerta[i].id}')" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalCard"  value="Scopri offerta"></div>
                 </div>
               </div>
             </div>`;
