@@ -62,7 +62,7 @@ const viaggi = [
     destinazione: "Havana",
     dataPartenza: "2023-01-10",
     dataRitorno: "2023-01-27",
-    descrizione: "Ammira il Colosseo e assapora la cucina italiana autentica.",
+    descrizione: "Esplora la cultura caraibica",
     periodo: "inverale",
     css: "hvn",
   },
@@ -73,7 +73,7 @@ const viaggi = [
     destinazione: "Puerto Rico",
     dataPartenza: "2023-02-02",
     dataRitorno: "2023-02-14",
-    descrizione: "Ammira il Colosseo e assapora la cucina italiana autentica.",
+    descrizione: "Esplora la cultura caraibica",
     periodo: "invernale",
     css: "pr",
   },
@@ -84,7 +84,7 @@ const viaggi = [
     destinazione: "Bucarest",
     dataPartenza: "2023-08-10",
     dataRitorno: "2023-08-17",
-    descrizione: "Ammira il Colosseo e assapora la cucina italiana autentica.",
+    descrizione: "Visita la terra di Dracula",
     periodo: "estivo",
     css: "bcr",
   },
@@ -96,7 +96,7 @@ const viaggi = [
     destinazione: "Amsterdam",
     dataPartenza: "2023-08-10",
     dataRitorno: "2023-08-27",
-    descrizione: "Ammira il Colosseo e assapora la cucina italiana autentica.",
+    descrizione: "La terra dei funghi allucinogeni",
     periodo: "estivo",
     css: "amt",
   },
@@ -159,11 +159,11 @@ for (let i = 0; i < periodo.length; i++) {
                     <h4 class="card-title"><span>${periodo[i].destinazione}</span></h4>
                     <p class="card-text">Dal: <span>${periodo[i].dataPartenza}</span></p>
                     <p class="card-text">Al: <span>${periodo[i].dataRitorno}</span></p>
-                    <div class="align-content-center justify-content-center d-flex"><a href="#" class="btn btn-outline-info">Scopri offerta</a></div>
+                    <div class="align-content-center justify-content-center d-flex"><input type="button" onclick="openModal('${periodo[i].id}')" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalCard"  value="Scopri offerta"></div>
                   </div>
                 </div>
               </div>`;
-}
+} //data-bs-toggle="modal" data-bs-target="#modalCard"
 
 //::fine mi prendo e mi stampo i 6 viaggi estivi cercando per perido;
 
@@ -194,7 +194,7 @@ for (let i = 0; i < viaggiLastMinute.length; i++) {
 }
 
 //::end lastminute
-
+annunciTotal();
 //::begin delete cards
 const deleteCards = document.querySelector("#deleteCards");
 deleteCards.addEventListener("click", function () {
@@ -202,9 +202,66 @@ deleteCards.addEventListener("click", function () {
   for (let i = 0; i < cards.length; i++) {
     cards[i].remove();
   }
+  annunciTotal();
 });
 //::end delete cards
 
 //::begin conta annunci
-const cards = document.querySelectorAll(".card");
+function annunciTotal() {
+  let totalCards = document.querySelectorAll(".card");
+  totalCards = totalCards.length;
+  const applyNr = document.querySelector("#totale");
+  applyNr.innerHTML = `${totalCards} Annunci totali + 1 offerta del giorno`;
+}
+
 //::end conta annunci
+
+//::begin modalCard
+const openModal = function (id) {
+  let found;
+  console.log(id);
+  for (let i = 0; i < viaggi.length; i++) {
+    if (id == viaggi[i].id) {
+      found = viaggi[i];
+      break;
+    }
+  }
+  const modalBody = document.querySelector("#modalTarget");
+  modalBody.innerHTML = `
+  <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">${found.destinazione}</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+  <div id="carouselExampleRide" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="./assets/destinazioni/${found.css}/1.jpg" class="d-block w-100" alt="..." />
+                </div>
+                <div class="carousel-item">
+                  <img src="./assets/destinazioni/${found.css}/2.jpg" class="d-block w-100" alt="..." />
+                </div>
+                <div class="carousel-item">
+                  <img src="./assets/destinazioni/${found.css}/3.jpg" class="d-block w-100" alt="..." />
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <ul>
+              <li>Prezzo: ${found.prezzo}</li>
+              <li>Descrizione: ${found.descrizione}</li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>`;
+};
+//:end modalCard

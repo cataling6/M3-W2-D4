@@ -271,3 +271,8 @@ ul > li {
   background-position: 50% 50%;
   aspect-ratio: 2/1;
 }
+
+#modalCard img {
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
