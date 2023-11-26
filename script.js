@@ -137,7 +137,7 @@ for (let i = 0; i < offerta.length; i++) {
                   <h4 class="card-title"><span>${offerta[i].destinazione}</span></h4>
                   <p class="card-text">Dal: <span>${offerta[i].dataPartenza}</span></p>
                   <p class="card-text">Al: <span>${offerta[i].dataRitorno}</span></p>
-                  <div class="align-content-center justify-content-center d-flex"><input type="button" onclick="openModal('${offerta[i].id}')" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalCard"  value="Scopri offerta"></div>
+                  <div class="align-content-center justify-content-center d-flex"><input type="button" onclick="openModal('${offerta[i].id}')" class="btn btn-outline-info col-12" data-bs-toggle="modal" data-bs-target="#modalCard"  value="Scopri offerta"></div>
                 </div>
               </div>
             </div>`;
@@ -159,7 +159,7 @@ for (let i = 0; i < periodo.length; i++) {
                     <h4 class="card-title"><span>${periodo[i].destinazione}</span></h4>
                     <p class="card-text">Dal: <span>${periodo[i].dataPartenza}</span></p>
                     <p class="card-text">Al: <span>${periodo[i].dataRitorno}</span></p>
-                    <div class="align-content-center justify-content-center d-flex"><input type="button" onclick="openModal('${periodo[i].id}')" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalCard"  value="Scopri offerta"></div>
+                    <div class="align-content-center justify-content-center d-flex"><input type="button" onclick="openModal('${periodo[i].id}')" class="btn btn-outline-info col-12" data-bs-toggle="modal" data-bs-target="#modalCard"  value="Scopri offerta"></div>
                   </div>
                 </div>
               </div>`;
