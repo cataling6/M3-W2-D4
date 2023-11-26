@@ -192,7 +192,19 @@ for (let i = 0; i < viaggiLastMinute.length; i++) {
           <div class="card ${viaggiLastMinute[i].css} border-0"><label class="bg-blur text-center text-bg-danger">${viaggiLastMinute[i].destinazione}</label><img src="./assets/last_minute.png" class="last-minute-logo" alt="" /></div>
         </div>`;
 }
-let lastMinuteDiv = document.querySelector(".last-minute");
-lastMinuteDiv.style.color = "blue";
 
 //::end lastminute
+
+//::begin delete cards
+const deleteCards = document.querySelector("#deleteCards");
+deleteCards.addEventListener("click", function () {
+  const cards = document.querySelectorAll(".card");
+  for (let i = 0; i < cards.length; i++) {
+    cards[i].remove();
+  }
+});
+//::end delete cards
+
+//::begin conta annunci
+const cards = document.querySelectorAll(".card");
+//::end conta annunci

@@ -27,13 +27,18 @@
                   <a class="nav-link active" aria-current="page" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Offerte</a>
+                  <a class="nav-link" href="#" id="deleteCards">Cancella Cards</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#carouselExampleDark">Dicono di noi</a>
                 </li>
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Seleziona un periodo </a>
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Le nostre offerte </a>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#estivo">Estivo</a></li>
-                    <li><a class="dropdown-item" href="#invernale">Invernale</a></li>
+                    <li><a class="dropdown-item d-none d-md-block" href="#offertaDG">Offerta del giorno</a></li>
+                    <li><a class="dropdown-item" href="#offerte">Offerte settimanali</a></li>
+                    <li><a class="dropdown-item" href="#estivo">Offerte estive</a></li>
+                    <li><a class="dropdown-item" href="#last-minute-section">Offerte Last Minute</a></li>
                   </ul>
                 </li>
               </ul>
@@ -62,8 +67,11 @@
 
       <div class="container d-sm-none d-md-block d-none d-sm-block mt-5" id="offertaDG">
         <div class="mini-vuoto"></div>
-        <h2 class="text-center">Offerta del giorno!!!</h2>
-        <div class="row">
+        <div class="d-flex justify-content-between">
+          <h2 class="text-center">Offerta del giorno!!!</h2>
+          <a class="fs-3" data-bs-toggle="collapse" href="#collapse-offdg" role="button" aria-expanded="false" aria-controls="collapse-offdg"> <i class="fa-solid fa-window-minimize"></i></a>
+        </div>
+        <div class="row" id="collapse-offdg">
           <div class="daily-discount">
             <div class="col-lg-4 h-100 bg-blur describe">
               <h4>Vola nella terra di Dracula!</h4>
@@ -92,8 +100,11 @@
 
       <div class="container col-lg-12 col-md-12 col-sm-12 mt-5" id="offerte">
         <div class="mini-vuoto d-none d-md-block"></div>
-        <h2 class="text-center">Offerte della settimana</h2>
-        <div class="row"></div>
+        <div class="d-flex justify-content-between">
+          <h2 class="text-center">Offerte della settimana</h2>
+          <a class="fs-3" data-bs-toggle="collapse" href="#collapse-offsett" role="button" aria-expanded="false" aria-controls="collapse-offsett"> <i class="fa-solid fa-window-minimize"></i></a>
+        </div>
+        <div class="row" id="collapse-offsett"></div>
         <div class="d-flex justify-content-center">
           <a href="#estivo">
             <div class="btn btn-outline-info mt-5"><i class="fa fa-arrow-down-long"></i> scopri le offerte estive <i class="fa fa-arrow-down-long"></i></div>
@@ -101,12 +112,15 @@
         </div>
       </div>
       <div class="vuoto-bianco"></div>
-      <div class="vuoto2 d-none d-md-block"></div>
+      <div class="vuoto3 d-none d-md-block"></div>
 
       <div class="container" id="estivo">
         <div class="mini-vuoto d-none d-md-block"></div>
-        <h2 class="text-center">Offerte estive (Copparo consigliata)</h2>
-        <div class="row"></div>
+        <div class="d-flex justify-content-between">
+          <h2 class="text-center">Offerte estive (Copparo consigliata)</h2>
+          <a class="fs-3" data-bs-toggle="collapse" href="#collapse-offest" role="button" aria-expanded="false" aria-controls="collapse-offest"> <i class="fa-solid fa-window-minimize"></i></a>
+        </div>
+        <div class="row" id="collapse-offest"></div>
         <div class="d-flex justify-content-center">
           <a href="#last-minute-section">
             <div class="btn btn-outline-info mt-5"><i class="fa fa-arrow-down-long"></i> Hai voglia di un last minute?<i class="fa fa-arrow-down-long"></i></div>
@@ -114,10 +128,12 @@
         </div>
       </div>
       <div class="vuoto-bianco"></div>
-      <div class="vuoto2 d-none d-md-block"></div>
+      <div class="vuoto4 d-none d-md-block"></div>
       <div class="mini-vuoto d-none d-md-block"></div>
-
-      <h2 class="text-center" id="last-minute-section">Offerte Last minute</h2>
+      <div class="d-flex justify-content-between container">
+        <h2 class="text-center" id="last-minute-section">Offerte Last minute</h2>
+        <a class="fs-3" data-bs-toggle="collapse" href="#last-minute" role="button" aria-expanded="false" aria-controls="last-minute"> <i class="fa-solid fa-window-minimize"></i></a>
+      </div>
       <div class="container d-flex col-12 col-lg-12 flex-wrap" id="last-minute"></div>
       <div class="d-flex justify-content-center">
         <a href="#carouselExampleDark">
@@ -125,7 +141,7 @@
         </a>
       </div>
       <div class="vuoto-bianco"></div>
-      <div class="vuoto2 d-none d-md-block"></div>
+      <div class="vuoto5 d-none d-md-block"></div>
       <div class="mini-vuoto d-none d-md-block"></div>
       <div class="row justify-content-center mt-5">
         <div id="carouselExampleDark" class="carousel slide w-100" data-bs-interval="3000" data-bs-ride="carousel">
@@ -177,6 +193,34 @@
         </div>
       </div>
     </main>
+
+    <!-- Modal contact-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Scrivici:</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <div class="form-floating">
+                <input type="email" class="form-control" id="email" placeholder="E-mail" />
+                <label for="email">E-mail</label>
+              </div>
+              <div class="form-floating">
+                <textarea name="msg" id="messaggio" class="form-control mt-5" placeholder="Messaggio" cols="30" rows="150"></textarea>
+                <label for="messaggio">Messaggio</label>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Invia</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <footer class="d-flex justify-content-between mt-5">
       <div class="col-lg-4">
         <ul>
@@ -185,7 +229,7 @@
           <li><i class="fa-solid fa-phone"></i> 06/123456</li>
         </ul>
       </div>
-      <div class="align-self-center"><input type="button" value="Contact us" class="btn btn-outline-primary" /></div>
+      <div class="align-self-center"><input type="button" value="Contact us" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" /></div>
     </footer>
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script>

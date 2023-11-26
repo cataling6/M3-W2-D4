@@ -16,7 +16,7 @@
 }
 .nav-item:hover {
   transition: 0.5s all;
-  transform: scale(1.5);
+  transform: scale(1.1);
 }
 
 .jumbo-bg {
@@ -64,6 +64,36 @@
 
 .vuoto2 {
   background-image: url(/assets/destinazioni/spiaggia.jpg);
+  object-fit: cover;
+  background-attachment: fixed;
+  background-position: 50% 70%;
+  background-size: 100%;
+  background-repeat: none;
+  height: 100vh;
+}
+
+.vuoto3 {
+  background-image: url(/assets/destinazioni/bucarest2.jpg);
+  object-fit: cover;
+  background-attachment: fixed;
+  background-position: 50% 70%;
+  background-size: 100%;
+  background-repeat: none;
+  height: 100vh;
+}
+
+.vuoto4 {
+  background-image: url(/assets/destinazioni/new-york.webp);
+  object-fit: cover;
+  background-attachment: fixed;
+  background-position: 50% 70%;
+  background-size: 100%;
+  background-repeat: none;
+  height: 100vh;
+}
+
+.vuoto5 {
+  background-image: url(/assets/destinazioni/porto-rico.jpg);
   object-fit: cover;
   background-attachment: fixed;
   background-position: 50% 70%;
