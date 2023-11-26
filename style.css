@@ -35,10 +35,18 @@
 }
 
 .bg-blur {
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(15px);
 }
 .card-body > * > span {
   font-weight: bold;
+}
+
+.vuoto-mobile {
+  background-image: url(./assets/destinazioni/tartaruga.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 40vh;
 }
 
 .vuoto-bianco {
@@ -89,4 +97,147 @@
 #offertaDG > div.row > div > div > ul {
   list-style: none;
   padding: 0;
+}
+
+#estivo > div > div > * {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.card {
+  transition: 0.5s;
+}
+.card:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+#carouselExampleCaptions > div.row > div > div.carousel-item.active > div > div > div.col-lg-6.ps-4 > img {
+  width: 150px;
+}
+
+.carousel-dim {
+  width: 60%;
+  height: 50%;
+}
+
+.mini-vuoto {
+  height: 25vh;
+}
+
+ul > li {
+  list-style: none;
+}
+
+.last-minute {
+  background-image: url(./assets/destinazioni/bcn.webp);
+  position: relative;
+  background-repeat: none;
+  background-position: 50% 50%;
+  aspect-ratio: 2/1;
+}
+
+.last-minute-logo {
+  bottom: 0;
+  left: 0;
+  width: 75px;
+  position: absolute;
+  transition: 0.5s all;
+}
+
+#last-minute > div > div:hover .last-minute-logo {
+  bottom: -30px;
+  left: -30px;
+  width: 75px;
+  position: absolute;
+  transition: 0.5s all;
+}
+
+/*classi da cambiare in base all'offerta pescata nei lastminute*/
+.parigi {
+  background-image: url(./assets/destinazioni/Parigi.jpg);
+  position: relative;
+  background-repeat: none;
+  background-size: 100%;
+  background-position: 50% 50%;
+  aspect-ratio: 2/1;
+}
+
+.ny {
+  background-image: url(./assets/destinazioni/new-york.webp);
+  position: relative;
+  background-repeat: none;
+  background-size: 100%;
+  background-position: 50% 50%;
+  aspect-ratio: 2/1;
+}
+
+.bcn {
+  background-image: url(./assets/destinazioni/bcn.webp);
+  position: relative;
+  background-repeat: none;
+  background-size: 100%;
+  background-position: 50% 50%;
+  aspect-ratio: 2/1;
+}
+
+.tokyo {
+  background-image: url(./assets/destinazioni/tokyo.webp);
+  position: relative;
+  background-repeat: none;
+  background-size: 100%;
+  background-position: 50% 50%;
+  aspect-ratio: 2/1;
+}
+
+.hvn {
+  background-image: url(./assets/destinazioni/havana.avif);
+  position: relative;
+  background-repeat: none;
+  background-size: 100%;
+  background-position: 50% 50%;
+  aspect-ratio: 2/1;
+}
+
+.pr {
+  background-image: url(./assets/destinazioni/porto-rico.jpg);
+  position: relative;
+  background-repeat: none;
+  background-size: 100%;
+  background-position: 50% 50%;
+  aspect-ratio: 2/1;
+}
+
+.roma {
+  background-image: url(./assets/destinazioni/roma.jpg);
+  position: relative;
+  background-repeat: none;
+  background-size: 100%;
+  background-position: 50% 50%;
+  aspect-ratio: 2/1;
+}
+
+.bcr {
+  background-image: url(./assets/destinazioni/bucarest.webp);
+  position: relative;
+  background-repeat: none;
+  background-size: 100%;
+  background-position: 50% 50%;
+  aspect-ratio: 2/1;
+}
+
+.amt {
+  background-image: url(./assets/destinazioni/amsterdam.jpg);
+  position: relative;
+  background-repeat: none;
+  background-size: 100%;
+  background-position: 50% 50%;
+  aspect-ratio: 2/1;
+}
+
+.cpp {
+  background-image: url(./assets/destinazioni/Copparo.JPG);
+  position: relative;
+  background-repeat: none;
+  background-size: 100%;
+  background-position: 50% 50%;
+  aspect-ratio: 2/1;
 }

@@ -8,6 +8,7 @@ const viaggi = [
     dataRitorno: "2023-01-20",
     descrizione: "Esplora la città dell'amore e visita la Torre Eiffel.",
     periodo: "invernale",
+    css: "parigi",
   },
   {
     id: 2,
@@ -18,6 +19,7 @@ const viaggi = [
     dataRitorno: "2024-01-05",
     descrizione: "Scopri la Grande Mela e visita Times Square e Central Park.",
     periodo: "invernale",
+    css: "ny",
   },
   {
     id: 3,
@@ -28,6 +30,7 @@ const viaggi = [
     dataRitorno: "2023-05-10",
     descrizione: "Goditi il sole sulla spiaggia di Barceloneta e visita la Sagrada Familia.",
     periodo: "estivo",
+    css: "bcn",
   },
   {
     id: 4,
@@ -38,6 +41,7 @@ const viaggi = [
     dataRitorno: "2023-07-22",
     descrizione: "Esplora la cultura giapponese e prova deliziosi piatti sushi.",
     periodo: "estivo",
+    css: "tokyo",
   },
   {
     id: 5,
@@ -48,6 +52,7 @@ const viaggi = [
     dataRitorno: "2023-05-17",
     descrizione: "Ammira il Colosseo e assapora la cucina italiana autentica.",
     periodo: "estivo",
+    css: "roma",
   },
 
   {
@@ -59,6 +64,7 @@ const viaggi = [
     dataRitorno: "2023-01-27",
     descrizione: "Ammira il Colosseo e assapora la cucina italiana autentica.",
     periodo: "inverale",
+    css: "hvn",
   },
   {
     id: 7,
@@ -69,6 +75,7 @@ const viaggi = [
     dataRitorno: "2023-02-14",
     descrizione: "Ammira il Colosseo e assapora la cucina italiana autentica.",
     periodo: "invernale",
+    css: "pr",
   },
   {
     id: 8,
@@ -79,6 +86,7 @@ const viaggi = [
     dataRitorno: "2023-08-17",
     descrizione: "Ammira il Colosseo e assapora la cucina italiana autentica.",
     periodo: "estivo",
+    css: "bcr",
   },
 
   {
@@ -90,6 +98,7 @@ const viaggi = [
     dataRitorno: "2023-08-27",
     descrizione: "Ammira il Colosseo e assapora la cucina italiana autentica.",
     periodo: "estivo",
+    css: "amt",
   },
   {
     id: 10,
@@ -100,6 +109,7 @@ const viaggi = [
     dataRitorno: "2023-06-14",
     descrizione: "Venite a trovarmi",
     periodo: "estivo",
+    css: "cpp",
   },
 ];
 
@@ -156,3 +166,33 @@ for (let i = 0; i < periodo.length; i++) {
 }
 
 //::fine mi prendo e mi stampo i 6 viaggi estivi cercando per perido;
+
+//:begin lastminute
+let viaggiLastMinute = [];
+//mi scelgo in modo casuale  x (in quyesto caso 4) destinazioni da usare per i last minute
+function lastMinute() {
+  // creo una coppia dell'array di partenza per poter gestire ed evitare di avere 1 destinazione scelta piu di una votla
+  let viaggi2 = viaggi.slice();
+  viaggiLastMinute = [];
+
+  for (let i = 0; i < 4; i++) {
+    //viaggiLastMinute.push(viaggi[Math.floor(Math.random() * viaggi.length)]);
+    let indiceCasuale = Math.floor(Math.random() * viaggi2.length);
+    let elemento = viaggi2.splice(indiceCasuale, 1)[0];
+    viaggiLastMinute.push(elemento);
+  }
+}
+
+lastMinute();
+
+const lastMinuteContainer = document.querySelector("#last-minute");
+
+for (let i = 0; i < viaggiLastMinute.length; i++) {
+  lastMinuteContainer.innerHTML += `<div class="col-6 col-lg-3 p-1 mt-2">
+          <div class="card ${viaggiLastMinute[i].css} border-0"><label class="bg-blur text-center text-bg-danger">${viaggiLastMinute[i].destinazione}</label><img src="./assets/last_minute.png" class="last-minute-logo" alt="" /></div>
+        </div>`;
+}
+let lastMinuteDiv = document.querySelector(".last-minute");
+lastMinuteDiv.style.color = "blue";
+
+//::end lastminute
