@@ -213,7 +213,6 @@ function annunciTotal() {
   const applyNr = document.querySelector("#totale");
   applyNr.innerHTML = `${totalCards} Annunci totali + 1 offerta del giorno`;
 }
-
 //::end conta annunci
 
 //::begin modalCard
